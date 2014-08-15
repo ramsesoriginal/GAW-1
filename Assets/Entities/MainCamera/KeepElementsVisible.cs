@@ -7,7 +7,7 @@ namespace MainCamera {
 		public GameObject[] elements;
 		public float nearlimit=4;
 		public float farlimit=100;
-		public float speed=1;
+		public float speed=3;
 		public bool moveAlongXAxis = false;
 		public bool moveAlongYAxis = true;
 		public bool moveAlongZAxis = false;
