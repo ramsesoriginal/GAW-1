@@ -18,6 +18,7 @@ namespace MainCamera {
 
 		void Update () {
 			if (data != null) {
+				Anchor = data.target.position;
 				postition = data.position;
 				postition.RotateAround (Anchor, Vector3.up, data.input.position.x * rotateSpeed * Time.deltaTime);
 				postition.RotateAround (Anchor, Vector3.left, data.input.position.y * rotateSpeed * Time.deltaTime);
