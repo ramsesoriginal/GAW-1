@@ -7,6 +7,9 @@ public class Locomotion : MonoBehaviour {
 	public float Force = 4;
 	public float Acceleration = 4;
 
+	public bool player2;
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -14,11 +17,15 @@ public class Locomotion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetAxis ("Horizontal")>0.1 || Input.GetAxis ("Horizontal")< -0.1 ) {
-			rigidbody.AddForce(Time.deltaTime * unrotated.right * Input.GetAxis ("Horizontal") * Force,ForceMode.VelocityChange);
+		var playerText = "Player 1";
+		if (player2)
+			playerText = "Player 2";
+
+		if (Input.GetAxis (playerText + " Horizontal")>0.1 || Input.GetAxis (playerText + " Horizontal")< -0.1 ) {
+			rigidbody.AddForce(Time.deltaTime * unrotated.right * Input.GetAxis (playerText + " Horizontal") * Force,ForceMode.VelocityChange);
 		}
-		if (Input.GetAxis ("Vertical")>0.1 || Input.GetAxis ("Vertical")< -0.1 ) {
-			rigidbody.AddForce(Time.deltaTime * unrotated.forward * Input.GetAxis ("Vertical") * Acceleration,ForceMode.VelocityChange);
+		if (Input.GetAxis (playerText + " Vertical")>0.1 || Input.GetAxis (playerText + " Vertical")< -0.1 ) {
+			rigidbody.AddForce(Time.deltaTime * unrotated.forward * Input.GetAxis (playerText + " Vertical") * Acceleration,ForceMode.VelocityChange);
 		}
 	}
 }

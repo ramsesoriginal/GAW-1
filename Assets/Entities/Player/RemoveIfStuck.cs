@@ -33,10 +33,6 @@ public class RemoveIfStuck : MonoBehaviour {
 	}
 
 	void RemoveAndReset() {
-		Debug.Log("Removing stuff");
-		Debug.Log(Camera.main);
-		Debug.Log(Camera.main.gameObject);
-		Debug.Log(Camera.main.gameObject.GetComponent<MainCamera.KeepElementsVisible> ());
 		var keepElements = Camera.main.gameObject.GetComponent<MainCamera.KeepElementsVisible> ();
 	//	Debug.Log(keepElements);
 		GameObject[] dest = new GameObject[keepElements.elements.Length -1];
