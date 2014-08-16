@@ -13,8 +13,8 @@ namespace MainCamera {
 		private bool inputTag;
 
 		void Start () {
-			checkTags ();
 			InitAll ();
+			checkTags ();
 		}
 		
 		void Update () {
@@ -34,15 +34,15 @@ namespace MainCamera {
 		}
 
 		void checkTags() {
-			var tags = UnityEditorInternal.InternalEditorUtility.tags;
-			foreach (var tag in tags) {
-				if (tag == "CameraPositio")
+			//var tags = UnityEditorInternal.InternalEditorUtility.tags;
+			//foreach (var tag in tags) {
+			//	if (tag == "CameraPositio")
 					postionTag = true;
-				if (tag == "CameraTarget")
+			//	if (tag == "CameraTarget")
 					targetTag = true;
-				if (tag == "CameraInput")
+			//	if (tag == "CameraInput")
 					inputTag = true;
-			}
+			//}
 		}
 
 		void initPosition() {
