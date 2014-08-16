@@ -26,7 +26,6 @@ namespace Lanes {
 
 		void GenerateNext() {
 			if (child == null) {
-				Debug.Log (builder.IsSingle);
 				Random.seed = (int)System.DateTime.Now.Ticks;
 				GameObject[] arraychoice;
 				if (builder.IsSingle)
@@ -55,7 +54,7 @@ namespace Lanes {
 					if (brother != null)
 					{
 						brother.child =(GameObject)Instantiate(builder.Ender,brother.transform.position, brother.transform.rotation );
-						child.transform.parent =brother.transform;
+						brother.child.transform.parent =brother.transform;
 					}
 				}
 			}
