@@ -47,7 +47,7 @@ namespace Player {
 				Array.Copy (keepElements.elements,index +1, dest, index, keepElements.elements.Length - index - 1);
 			keepElements.elements = dest;
 		//	Debug.Log("Reinitialize");
-			keepElements.Reinitialize ();
+			keepElements.Reinitialize (false);
 	//		Debug.Log("Destroy");
 			Destroy (gameObject);
 		}

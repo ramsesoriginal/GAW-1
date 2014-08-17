@@ -5,6 +5,7 @@ namespace MainCamera {
 	public class AvoidObstacles : MonoBehaviour {
 
 		public float height = 5.0f;
+		public float speed = 2.0f;
 		private Data data;
 
 		// Use this for initialization
@@ -18,9 +19,9 @@ namespace MainCamera {
 			RaycastHit hit;
 			if (Physics.Raycast(targetPos, Vector3.down, out hit)) {
 				if (Vector3.Distance(hit.point, targetPos) < height) {
-					targetPos.y += height;
+					targetPos.y = Mathf.Lerp(targetPos.y, targetPos.y + height, speed*Time.deltaTime);
 				} else {
-					targetPos.y = hit.point.y + height;
+					targetPos.y = Mathf.Lerp(targetPos.y, hit.point.y + height, speed*Time.deltaTime);
 				}
 			} else if (Physics.Raycast(targetPos, Vector3.up, out hit)) {
 				targetPos.y += height + Vector3.Distance(hit.point, targetPos);
