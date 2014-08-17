@@ -19,6 +19,8 @@ namespace MainCamera {
 			if (Physics.Raycast(targetPos, Vector3.down, out hit)) {
 				if (Vector3.Distance(hit.point, targetPos) < height) {
 					targetPos.y += height;
+				} else {
+					targetPos.y = hit.point.y + height;
 				}
 			} else if (Physics.Raycast(targetPos, Vector3.up, out hit)) {
 				targetPos.y += height + Vector3.Distance(hit.point, targetPos);
