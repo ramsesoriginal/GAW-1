@@ -11,6 +11,12 @@ namespace Lanes {
 		private LaneBuilder builder;
 		private GameObject child;
 
+		public bool isFront {
+			get {
+				return child == null;
+			}
+		}
+
 		// Use this for initialization
 		void Start () {
 			builder = (LaneBuilder)GetComponentInParent<LaneBuilder> ();

@@ -229,7 +229,7 @@ InputManager:
     axis: 1
     joyNum: 3
   - serializedVersion: 3
-    m_Name: Player 4 Hotizontal
+    m_Name: Player 4 Horizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 

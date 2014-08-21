@@ -9,13 +9,15 @@ namespace Player {
 		public float TimeLimit = 1.5f;
 
 
-		public float currentVelocity;
-		public bool currentlystopped;
+		private float currentVelocity;
+		private bool currentlystopped;
 		private float stoppedAt;
+		private Remover remover;
 
 		// Use this for initialization
 		void Start () {
 			currentlystopped = false;
+			remover = GetComponent<Remover> ();
 		}
 		
 		// Update is called once per frame
@@ -27,29 +29,10 @@ namespace Player {
 					currentlystopped = true;
 				}
 			} else if (Time.realtimeSinceStartup - stoppedAt > TimeLimit) {
-					RemoveAndReset ();
+				remover.RemoveAndReset ();
 			} else if (currentVelocity > velocityTreshHold) {
 				currentlystopped = false;
 			}
-		}
-
-		void RemoveAndReset() {
-			var keepElements = Camera.main.gameObject.GetComponent<MainCamera.KeepElementsVisible> ();
-		//	Debug.Log(keepElements);
-			GameObject[] dest = new GameObject[keepElements.elements.Length -1];
-		//	Debug.Log(dest);
-			var index = Array.IndexOf (keepElements.elements, gameObject);
-			
-		//	Debug.Log(index);
-			if (index > 0)
-				Array.Copy (keepElements.elements,0,dest,0,index);
-			if (index > 0 && index < keepElements.elements.Length - 1)
-				Array.Copy (keepElements.elements,index +1, dest, index, keepElements.elements.Length - index - 1);
-			keepElements.elements = dest;
-		//	Debug.Log("Reinitialize");
-			keepElements.Reinitialize (false);
-	//		Debug.Log("Destroy");
-			Destroy (gameObject);
 		}
 	}
 }
