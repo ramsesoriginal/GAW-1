@@ -21,7 +21,7 @@ namespace CustomGUI {
 		
 		// Update is called once per frame
 		void Update () {
-			playerCount = countPlayers ();
+			currentPlayerCount = countPlayers ();
 		}
 
 		int countPlayers() {

@@ -1755,6 +1755,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 2101398795}
   - 114: {fileID: 2101398796}
+  - 114: {fileID: 2101398797}
+  - 114: {fileID: 2101398798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1794,6 +1796,28 @@ MonoBehaviour:
   playerCount: 0
   currentPlayerCount: 0
   ranking: []
+--- !u!114 &2101398797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2101398794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cf508f220f756488f8bdf971f4dce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2101398798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2101398794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cf50b20676aa64c9596ada0c93f802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2123142510
 GameObject:
   m_ObjectHideFlags: 0
