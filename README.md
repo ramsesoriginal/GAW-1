@@ -34,6 +34,8 @@ I provided Windows, Linux and MacOsX Builds (though I only tested the Windows Bu
   * [MacOsX](https://github.com/ramsesoriginal/GAW-1/raw/master/Builds/MacOsX.zip)
   * [Windows](https://github.com/ramsesoriginal/GAW-1/raw/master/Builds/Windows.zip)
 
+Camera movement is still a bit wonky, often buggy, and generally broken. Well, I did my best!
+
 I might work on this game a bit more in the future, but I have nothing planned. If you have some feature you're requesting, or found a big bug, please just [submit an issue](https://github.com/ramsesoriginal/GAW-1/issues).
 
 For any other kind of feedback, just [send me a mail](mailto://ramsesoriginal+gaw1@gmail.com), [contact me on twitter](https://twitter.com/ramsesoriginal), let me know [on facebook](https://www.facebook.com/ramsesoriginal) or any other social network, just search ramsesoriginal.
