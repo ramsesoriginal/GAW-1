@@ -20,8 +20,8 @@ The game is controllable with gamepads or keyboard (keyboard only for 2 player).
 Player 1 and 2 can use either keyboard or gamepad, player 3-6 only gamepad.
 
   * Keyboard controls:
-      * Player1: "a" and "d" to steer, "w" to accelerate, "s" to break/reverse
-      * Player1: "←" and "→" to steer, "↑" to accelerate, "↓" to break/reverse
+      * Player 1: "a" and "d" to steer, "w" to accelerate, "s" to break/reverse
+      * Player 2: "←" and "→" to steer, "↑" to accelerate, "↓" to break/reverse
   * Gamepad controls:
     * Left analogue stick: movement
   * To confirm a choice, replay the game or resume after pause, press "space" or the "Y" button on the Gamepad.
