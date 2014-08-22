@@ -13,11 +13,13 @@ namespace CustomGUI {
 		
 		// Update is called once per frame
 		void OnGUI () {
-			string playerList = "RANKING:\n\n";
-			foreach (var player in counter.ranking) {
-				playerList += player.name + " (" + player.rigidbody.velocity.magnitude.ToString("F2") + ")\n" ;
+			if (counter.currentPlayerCount > 1) {
+				string playerList = "RANKING:\n\n";
+				foreach (var player in counter.ranking) {
+						playerList += player.name + " (" + player.rigidbody.velocity.magnitude.ToString ("F2") + ")\n";
+				}
+				GUI.Box (new Rect (10, 10, 200, 200), playerList);
 			}
-			GUI.Box(new Rect(10,10,200,200), playerList);
 		}
 	}
 }

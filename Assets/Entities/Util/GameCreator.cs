@@ -33,6 +33,7 @@ namespace Util {
 					createdPlayers.Add(realplayer);
 				}
 			}
+			Camera.main.transform.position = new Vector3 (0, createdPlayers[0].transform.position.y+30, createdPlayers[0].transform.position.z-10);
 			var kv = Camera.main.GetComponent<MainCamera.KeepElementsVisible> ();
 			kv.elements = new GameObject[createdPlayers.Count];
 			for (int i = 0; i < createdPlayers.Count; i++) {
