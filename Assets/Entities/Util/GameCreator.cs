@@ -11,18 +11,18 @@ namespace Util {
 		public GameObject[] playerObjects;
 		public GameObject Player;
 
-		private GameObject real;
-		public List<GameObject> createdPlayers;
+		private GameObject realLane;
+		private List<GameObject> createdPlayers;
 		
 		// Use this for initialization
 		void Start () {
-			create ();
+			//create ();
 		}
 
 		// Use this for initialization
 		public void create () {
-			real = (GameObject) Instantiate (blueprint, LaneBuilder.transform.position, LaneBuilder.transform.rotation);
-			real.transform.parent = LaneBuilder.transform;
+			realLane = (GameObject) Instantiate (blueprint, LaneBuilder.transform.position, LaneBuilder.transform.rotation);
+			realLane.transform.parent = LaneBuilder.transform;
 			createdPlayers = new List<GameObject> ();
 			for (var i = 0; i < 6; i++) {
 				var obj = blueprint.transform.FindChild ("Player"+(i+1).ToString());
@@ -40,6 +40,21 @@ namespace Util {
 				kv.elements[i] = createdPlayers[i];
 			}
 			kv.Reinitialize (true);
+			var counter = Player.GetComponent<CustomGUI.CountPlayers> ();
+			counter.ReStart ();
+			Time.timeScale = 1;
+		}
+
+		public void destroy() {
+			foreach (GameObject p in createdPlayers) {
+				if (p!=null) {
+					var remover = p.GetComponent<Player.Remover>();
+					if (remover != null) {
+						remover.RemoveAndReset();
+					}
+				}
+			}
+			Destroy (realLane);
 		}
 	}
 }

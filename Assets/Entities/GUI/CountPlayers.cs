@@ -13,8 +13,19 @@ namespace CustomGUI {
 
 		private List<Transform> players;
 
+		public bool gameRunning {
+			get {
+				return currentPlayerCount>1;
+			}
+		}
+
 		// Use this for initialization
 		void Start () {
+			ReStart ();
+		}
+		
+		// Use this for initialization
+		public void ReStart () {
 			currentPlayerCount = countPlayers ();
 			playerCount = currentPlayerCount;
 		}

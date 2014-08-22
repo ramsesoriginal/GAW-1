@@ -63,7 +63,10 @@ namespace MainCamera {
 				if (current != null)
 					position += current.position;
 			}
-			position = position / transforms.Length;
+			if (transforms.Length>0)
+				position = position / transforms.Length;
+			else
+				position = new Vector3 (0, 10, 10);
 			if (instant) {
 				midpoint.position = position;
 			} else {
