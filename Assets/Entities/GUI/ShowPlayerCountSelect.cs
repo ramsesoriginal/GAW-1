@@ -21,6 +21,7 @@ namespace Util {
 				winningtext += starter.playerCount.ToString();
 				winningtext += "\n\nPlayer 1 is on the left,";
 				winningtext += "\nPlayer " + starter.playerCount.ToString() + " is on the right";
+				winningtext += "\nPress Space to start";
 				GUI.Box(new Rect(Screen.width/2-100,Screen.height/2-50,200,100), winningtext);
 			}
 		}
